@@ -49,4 +49,7 @@ def run_ml():
           print(y_pred)
 
           # 위의 데이터로 예측한 자동차 구매 가능 금액은 6,746달러 입니다. => 유저에게 표시
-          st.info(f'위의 데이터로 예측한 자동차 구매 가능 금액은 {format(int(y_pred), ',')}달러 입니다.')
+          y_pred = y_pred[0]
+          y_pred = math.trunc(y_pred)
+          y_pred = format(y_pred, ',')
+          st.info(f'위의 데이터로 예측한 자동차 구매 가능 금액은 {y_pred}달러 입니다.')
