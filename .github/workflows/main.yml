@@ -21,6 +21,5 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           script: |
-            conda activate st_310
             cd Gihub/streamlit_car_price/                    
             git pull
